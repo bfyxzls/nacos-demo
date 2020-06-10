@@ -1,17 +1,17 @@
-package com.lind.nacosdemo;
+package com.lind.consumer;
 
-import com.lind.mongodb.EnableMongodb;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@SpringBootApplication(scanBasePackages = {"com.lind.nacosdemo", "com.lind.redis"})
+@SpringBootApplication
 @EnableDiscoveryClient
-@EnableMongodb
 @EnableFeignClients
-public class NacosDemoApplication {
+public class ConsumerApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(NacosDemoApplication.class, args);
+        SpringApplication.run(ConsumerApplication.class, args);
     }
+
 }
